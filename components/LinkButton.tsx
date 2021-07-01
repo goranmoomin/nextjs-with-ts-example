@@ -35,6 +35,7 @@ export function LinkButton({
           font-size: 15px;
           padding: 3px 0 6px;
           display: inline-block;
+          line-height: 1.6;
         }
         .root:hover {
           opacity: ${typeof hoverColor == "number" ? hoverColor : "1"};
