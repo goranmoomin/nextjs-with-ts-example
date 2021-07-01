@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <div className="header-container">
         <h1 className="logo">
-          <Logo />
+          <Logo fill="white" />
         </h1>
         <nav>
           <Toolbar />
@@ -105,7 +105,7 @@ export default function Home() {
           z-index: -1;
           transform: skewY(-12deg);
           height: 70vh;
-          background: #eee;
+          background: #a960ee;
           /*background: radial-gradient(
                 #ffcb57 23%,
                 rgba(255, 203, 87, 0) 67% 100%
