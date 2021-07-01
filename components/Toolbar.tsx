@@ -1,11 +1,31 @@
+import { useState } from "react";
+import { MenuType, Menu } from "./Menu";
+
+let menuTitles: { [k in MenuType]: string } = {
+  products: "Products",
+  developers: "Developers",
+  "use-cases": "Use cases",
+  company: "Company",
+  pricing: "Pricing",
+};
+
 export function Toolbar() {
+  let [menuType, setMenuType] = useState<MenuType | null>(null);
+  function onMouseLeave() {
+    setMenuType(null);
+  }
   return (
     <ul className="toolbar">
-      <li>Products</li>
-      <li>Use cases</li>
-      <li>Developers</li>
-      <li>Company</li>
-      <li>Pricing</li>
+      {Object.entries(menuTitles).map(([type, title]) => (
+        <li
+          onMouseEnter={() => setMenuType(type as MenuType)}
+          onMouseLeave={onMouseLeave}
+          key={type}
+        >
+          {title}
+        </li>
+      ))}
+      {menuType && <Menu type={menuType} />}
       <style jsx>{`
         .toolbar {
           display: flex;

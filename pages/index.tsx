@@ -106,7 +106,7 @@ export default function Home() {
           transform: skewY(-12deg);
           height: 70vh;
           background: #eee;
-          background: radial-gradient(
+          /*background: radial-gradient(
                 #ffcb57 23%,
                 rgba(255, 203, 87, 0) 67% 100%
               )
@@ -120,11 +120,12 @@ export default function Home() {
             radial-gradient(#90e0ff 15%, rgba(144, 224, 255, 0) 50% 100%) -620px
               0,
             radial-gradient(#90e0ff 25%, rgba(144, 224, 255, 0) 50% 100%) 520px -250px,
-            #a960ee;
+            #a960ee;*/
         }
         .demo-graphic {
           position: absolute;
           right: 0;
+          z-index: -1;
         }
       `}</style>
     </>
