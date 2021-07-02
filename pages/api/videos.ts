@@ -1,0 +1,40 @@
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from "next";
+
+import Knex from "knex";
+
+let knex = Knex({
+  client: "mysql",
+  connection: {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PWD,
+    database: "dev",
+  },
+});
+
+type Video = {
+  commentCount: number;
+  dislikeCount: number;
+  id: string;
+  likeCount: number;
+  owner_id: number;
+  privacy: string;
+  publishedAt: string;
+  subscribersGained: number;
+  subscribersLost: number;
+  thumbnails: string;
+  title: string;
+  viewCount: number;
+};
+
+type Data = {
+  result: Video[];
+};
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  res.status(200).json({ result: await knex<Video>("surveys_video").select() });
+}
