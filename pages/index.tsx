@@ -4,8 +4,11 @@ import { LinkButton } from "../components/LinkButton";
 import { Logo } from "../components/Logo";
 import { Toolbar } from "../components/Toolbar";
 import { InlineSpacer } from "../components/Spacer";
+import { spacing, typography } from "../helpers/styles";
 
 export default function Home() {
+  let maxWidth = 1080;
+  let leftSpacing = spacing(2);
   return (
     <>
       <Head>
@@ -57,26 +60,22 @@ export default function Home() {
         </div>
       </div>
       <style jsx>{`
-        h1 h2 h3 h4 h5 h6 p div {
-          font-family: sohne-var, -apple-system, BlinkMacSystemFont, "Segoe UI",
-            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-            sans-serif;
-        }
         .header-container {
-          margin: 0 84px;
-          padding: 12px 16px;
+          max-width: ${maxWidth}px;
+          margin: 0 auto;
+          padding: 12px 0px;
           display: flex;
           justify-content: space-between;
           align-items: center;
         }
         .logo {
           margin: 0;
-          padding-left: 16px;
+          padding-left: ${leftSpacing}px;
         }
         .hero-container {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          max-width: 1080px;
+          max-width: ${maxWidth}px;
           margin: auto;
         }
         .header-text {
@@ -88,14 +87,13 @@ export default function Home() {
           padding-left: 16px;
         }
         .description-text {
-          padding-left: 16px;
+          padding-left: ${leftSpacing}px;
           padding-right: 32px;
           line-height: calc(5 / 3);
           color: #425466;
         }
         .link-container {
-          padding-left: 16px;
-          padding-right: 32px;
+          padding-left: ${leftSpacing}px;
         }
         .gradient {
           position: absolute;

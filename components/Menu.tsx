@@ -6,6 +6,7 @@ import {
   InvoicingIcon,
   BillingIcon,
 } from "./Icons";
+import { spacing, typography } from "../helpers/styles";
 
 export type MenuType =
   | "products"
@@ -20,6 +21,7 @@ export declare interface MenuProps {
 }
 
 export function ProductsMenu() {
+  let menuSpacing = spacing(4);
   return (
     <div className="root">
       <section>
@@ -125,8 +127,8 @@ export function ProductsMenu() {
         .root {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          column-gap: 32px;
-          padding: 32px;
+          column-gap: ${menuSpacing}px;
+          padding: ${menuSpacing}px;
           padding-bottom: 0;
         }
         section {
@@ -140,15 +142,15 @@ export function ProductsMenu() {
         }
         li {
           padding: 0;
-          padding-bottom: 32px;
+          padding-bottom: ${menuSpacing}px;
         }
         h1 {
           margin: 0;
-          padding-bottom: 16px;
+          padding-bottom: ${spacing(2)}px;
           color: #8898aa;
           font-size: 13px;
           line-height: calc(20 / 13);
-          font-weight: 500;
+          font-weight: ${typography.fontWeight.bold};
           text-transform: uppercase;
         }
       `}</style>

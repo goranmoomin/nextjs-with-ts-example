@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MenuType, Menu } from "./Menu";
 import { CSSTransition } from "react-transition-group";
+import { typography } from "../helpers/styles";
 
 let menuTitles: { [k in MenuType]: string } = {
   products: "Products",
@@ -48,7 +49,8 @@ export function Toolbar() {
           list-style: none;
         }
         .toolbar > li {
-          font-weight: 500;
+          font-weight: ${typography.fontWeight.semiBold};
+          font-size: ${typography.fontSize.normal};
           padding: 10px 20px;
           transition: opacity 150ms ease;
           color: white;

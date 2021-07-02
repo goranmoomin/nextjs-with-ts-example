@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { typography, spacing } from "../helpers/styles";
 
 export declare interface LinkButtonProps {
   variant?: "button" | "link";
@@ -32,16 +33,14 @@ export function LinkButton({
       </svg>
       <style jsx>{`
         .root {
-          font-size: 15px;
-          padding: 3px 0 6px;
           display: inline-block;
-          line-height: 1.6;
+          font-weight: ${typography.fontWeight.semiBold};
+          padding: 3px 0 6px;
         }
         .root:hover {
           opacity: ${typeof hoverColor == "number" ? hoverColor : "1"};
         }
         .root-link {
-          font-weight: 500;
           color: ${color};
         }
         .root-link:hover {

@@ -1,3 +1,4 @@
+import { typography } from "../helpers/styles";
 import { InlineSpacer } from "./Spacer";
 
 export declare interface SiteNavigationProps {
@@ -39,7 +40,7 @@ export function SiteNavigation({
         }
         .menuitem-label {
           font-size: 14px;
-          font-weight: 480;
+          font-weight: ${typography.fontWeight.semiBold};
         }
         .menuitem-body {
           margin: 0;
