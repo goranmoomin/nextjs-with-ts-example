@@ -6,15 +6,13 @@ import PaymentLinksIcon from "./ColoredIcons/PaymentLinksIcon";
 import InvoicingIcon from "./ColoredIcons/InvoicingIcon";
 import BillingIcon from "./ColoredIcons/BillingIcon";
 
-/* export type ColoredIconType =
+export type ColoredIconType =
   | "payments"
   | "paymentLinks"
   | "invoicing"
-  | "billing"
-  | "connect"
-  | "terminal"; */
+  | "billing";
 
-let coloredIcons: { [iconType: string]: React.FC } = {
+let coloredIcons: { [iconType in ColoredIconType]: React.FunctionComponent } = {
   payments: PaymentsIcon,
   paymentLinks: PaymentLinksIcon,
   invoicing: InvoicingIcon,
@@ -22,24 +20,22 @@ let coloredIcons: { [iconType: string]: React.FC } = {
 };
 
 export declare interface ColoredIconProps {
-  iconType: string;
+  iconType: ColoredIconType;
 }
 
 export default function ColoredIcon({
   iconType,
 }: ColoredIconProps): JSX.Element {
-  if (coloredIcons[iconType]) {
-    return (
-      <>
-        <div>{React.createElement(coloredIcons[iconType])}</div>
-        <style jsx>{`
-          div {
-            width: ${icon.iconSize.medium}px;
-            height: ${icon.iconSize.medium}px;
-          }
-        `}</style>
-      </>
-    );
-  }
-  return <></>;
+  let Icon = coloredIcons[iconType];
+  return (
+    <div className="root">
+      <Icon />
+      <style jsx>{`
+        .root {
+          width: ${icon.iconSize.medium}px;
+          height: ${icon.iconSize.medium}px;
+        }
+      `}</style>
+    </div>
+  );
 }

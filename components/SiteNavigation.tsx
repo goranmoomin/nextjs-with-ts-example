@@ -1,12 +1,12 @@
 import { typography } from "../helpers/styles";
 import { InlineSpacer } from "./Spacer";
-import ColoredIcon from "./Icons/ColoredIcon";
+import ColoredIcon, { ColoredIconType } from "./Icons/ColoredIcon";
 
 export declare interface SiteNavigationProps {
   href: string;
   label: string;
   body: string;
-  iconType: string;
+  iconType: ColoredIconType;
 }
 
 export function SiteNavigation({
