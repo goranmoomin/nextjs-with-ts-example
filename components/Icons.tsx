@@ -1,8 +1,8 @@
 export function PaymentsIcon() {
   return (
     <svg
-      width="40"
-      height="40"
+      width="100%"
+      height="100%"
       fill="none"
       className="ProductIcon ProductIcon--Payments"
       viewBox="0 0 40 40"
@@ -51,8 +51,8 @@ export function PaymentLinksIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="27"
+      width="100%"
+      height="100%"
       fill="none"
       className="ProductIcon ProductIcon--PaymentLinks"
       viewBox="0 0 32 27"
@@ -121,8 +121,8 @@ export function InvoicingIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
+      width="100%"
+      height="100%"
       fill="none"
       className="ProductIcon ProductIcon--Invoicing"
       viewBox="0 0 40 40"
@@ -171,8 +171,8 @@ export function BillingIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
+      width="100%"
+      height="100%"
       fill="none"
       className="ProductIcon ProductIcon--Billing"
       viewBox="0 0 40 40"
