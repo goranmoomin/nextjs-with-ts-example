@@ -1,11 +1,5 @@
 import { ReactEventHandler } from "react";
 import { SiteNavigation } from "./SiteNavigation";
-import {
-  PaymentsIcon,
-  PaymentLinksIcon,
-  InvoicingIcon,
-  BillingIcon,
-} from "./Icons";
 import { spacing, typography } from "../helpers/styles";
 
 export type MenuType =
@@ -28,32 +22,36 @@ export function ProductsMenu() {
         <h1>Payments</h1>
         <ul>
           <li>
-            <SiteNavigation href="#" label="Payments" body="Online payments">
-              <PaymentsIcon />
-            </SiteNavigation>
+            <SiteNavigation
+              href="#"
+              label="Payments"
+              body="Online payments"
+              iconType="payments"
+            />
           </li>
           <li>
             <SiteNavigation
               href="#"
               label="Payment Links"
               body="No-code payments"
-            >
-              <PaymentLinksIcon />
-            </SiteNavigation>
+              iconType="paymentLinks"
+            />
           </li>
           <li>
-            <SiteNavigation href="#" label="Invoicing" body="Online invoices">
-              <InvoicingIcon />
-            </SiteNavigation>
+            <SiteNavigation
+              href="#"
+              label="Invoicing"
+              body="Online invoices"
+              iconType="invoicing"
+            />
           </li>
           <li>
             <SiteNavigation
               href="#"
               label="Billing"
               body="Subscription management"
-            >
-              <BillingIcon />
-            </SiteNavigation>
+              iconType="billing"
+            />
           </li>
         </ul>
       </section>
@@ -61,32 +59,36 @@ export function ProductsMenu() {
         <h1>Financial Services</h1>
         <ul>
           <li>
-            <SiteNavigation href="#" label="Payments" body="Online payments">
-              <PaymentsIcon />
-            </SiteNavigation>
+            <SiteNavigation
+              href="#"
+              label="Payments"
+              body="Online payments"
+              iconType="payments"
+            />
           </li>
           <li>
             <SiteNavigation
               href="#"
               label="Payment Links"
               body="No-code payments"
-            >
-              <PaymentLinksIcon />
-            </SiteNavigation>
+              iconType="paymentLinks"
+            />
           </li>
           <li>
-            <SiteNavigation href="#" label="Invoicing" body="Online invoices">
-              <InvoicingIcon />
-            </SiteNavigation>
+            <SiteNavigation
+              href="#"
+              label="Invoicing"
+              body="Online invoices"
+              iconType="invoicing"
+            />
           </li>
           <li>
             <SiteNavigation
               href="#"
               label="Billing"
               body="Subscription management"
-            >
-              <BillingIcon />
-            </SiteNavigation>
+              iconType="billing"
+            />
           </li>
         </ul>
       </section>
@@ -94,32 +96,36 @@ export function ProductsMenu() {
         <h1>Header</h1>
         <ul>
           <li>
-            <SiteNavigation href="#" label="Payments" body="Online payments">
-              <PaymentsIcon />
-            </SiteNavigation>
+            <SiteNavigation
+              href="#"
+              label="Payments"
+              body="Online payments"
+              iconType="payments"
+            />
           </li>
           <li>
             <SiteNavigation
               href="#"
               label="Payment Links"
               body="No-code payments"
-            >
-              <PaymentLinksIcon />
-            </SiteNavigation>
+              iconType="paymentLinks"
+            />
           </li>
           <li>
-            <SiteNavigation href="#" label="Invoicing" body="Online invoices">
-              <InvoicingIcon />
-            </SiteNavigation>
+            <SiteNavigation
+              href="#"
+              label="Invoicing"
+              body="Online invoices"
+              iconType="invoicing"
+            />
           </li>
           <li>
             <SiteNavigation
               href="#"
               label="Billing"
               body="Subscription management"
-            >
-              <BillingIcon />
-            </SiteNavigation>
+              iconType="billing"
+            />
           </li>
         </ul>
       </section>

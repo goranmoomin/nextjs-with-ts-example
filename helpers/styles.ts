@@ -40,3 +40,10 @@ export let typography = {
   },
   lineHeight: 1.6,
 } as const;
+
+export let icon = {
+  iconSize: {
+    small: 16,
+    medium: 32,
+  },
+} as const;

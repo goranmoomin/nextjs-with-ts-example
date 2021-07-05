@@ -1,22 +1,25 @@
 import { typography } from "../helpers/styles";
 import { InlineSpacer } from "./Spacer";
+import ColoredIcon from "./Icons/ColoredIcon";
 
 export declare interface SiteNavigationProps {
   href: string;
   label: string;
   body: string;
-  children: React.ReactNode;
+  iconType: string;
 }
 
 export function SiteNavigation({
   href,
   label,
   body,
-  children,
+  iconType,
 }: SiteNavigationProps) {
   return (
     <a href={href} className="site-navigation-container">
-      <span className="site-navigation-icon-container">{children}</span>
+      <span className="site-navigation-icon-container">
+        <ColoredIcon iconType={iconType} />
+      </span>
       <InlineSpacer size={14} axis="horizontal" />
       <span className="menuitem-container">
         <span className="menuitem-label">{label}</span>
