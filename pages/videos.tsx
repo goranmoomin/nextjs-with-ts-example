@@ -5,6 +5,7 @@ import {
 } from "next";
 
 import Knex from "knex";
+import type { Video } from "../models/video";
 
 let knex = Knex({
   client: "mysql",
@@ -15,21 +16,6 @@ let knex = Knex({
     database: "dev",
   },
 });
-
-type Video = {
-  commentCount: number;
-  dislikeCount: number;
-  id: string;
-  likeCount: number;
-  owner_id: number;
-  privacy: string;
-  publishedAt: string;
-  subscribersGained: number;
-  subscribersLost: number;
-  thumbnails: string;
-  title: string;
-  viewCount: number;
-};
 
 export declare interface TestProps {
   videos: Video[];
