@@ -5,6 +5,7 @@ import { Logo } from "../components/Logo";
 import { Toolbar } from "../components/Toolbar";
 import { InlineSpacer } from "../components/Spacer";
 import { spacing, typography } from "../helpers/styles";
+import { ExploreSection } from "../components/ExploreSection";
 
 export default function Home() {
   let maxWidth = 1080;
@@ -59,6 +60,11 @@ export default function Home() {
           />
         </div>
       </div>
+      <div className="section-background">
+        <div className="section-container">
+          <ExploreSection />
+        </div>
+      </div>
       <style jsx>{`
         .header-container {
           max-width: ${maxWidth}px;
@@ -77,6 +83,7 @@ export default function Home() {
           grid-template-columns: repeat(2, 1fr);
           max-width: ${maxWidth}px;
           margin: auto;
+          min-height: 728px;
         }
         .header-text {
           font-size: 94px;
@@ -122,8 +129,16 @@ export default function Home() {
         }
         .demo-graphic {
           position: absolute;
-          right: 0;
+          top: 0;
+          right: calc(calc(100vw - 1280px) / 2);
           z-index: -1;
+        }
+        .section-background {
+          background-color: #f6f9fc;
+        }
+        .section-container {
+          max-width: ${maxWidth}px;
+          margin: auto;
         }
       `}</style>
     </>

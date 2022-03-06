@@ -31,6 +31,9 @@ export let typography = {
   fontFamily: `sohne-var, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
   fontSize: {
     normal: 15,
+    medium: 18,
+    big: 38,
+    giant: 94,
   },
   fontWeight: {
     light: 200, // --fontWeightLight
